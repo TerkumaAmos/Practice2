@@ -22,14 +22,14 @@ class Avatar extends StatelessWidget {
       body: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Text(
               "Select a new avatar for your profile image",
               style: TextStyle(fontSize: 15),
             ),
           ),
           Container(
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             height: 50,
             decoration: BoxDecoration(
               boxShadow: [
@@ -76,7 +76,7 @@ class Avatar extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -94,25 +94,25 @@ class Avatar extends StatelessWidget {
               ),
               CardWithIcon(
                 image: Image(
-                  image: AssetImage("assets/avt3.jpg"),
+                  image: AssetImage("assets/avt4.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
               CardWithIcon(
                 image: Image(
-                  image: AssetImage("assets/avt4.jpg"),
+                  image: AssetImage("assets/avt3.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CardWithIcon(
                 image: Image(
-                  image: AssetImage("assets/avt1.jpg"),
+                  image: AssetImage("assets/avt3.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -124,7 +124,7 @@ class Avatar extends StatelessWidget {
               ),
               CardWithIcon(
                 image: Image(
-                  image: AssetImage("assets/avt3.jpg"),
+                  image: AssetImage("assets/avt1.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -136,13 +136,19 @@ class Avatar extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CardWithIcon(
                 image: Image(
-                  image: AssetImage("assets/avt1.jpg"),
+                  image: AssetImage("assets/avt4.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              CardWithIcon(
+                image: Image(
+                  image: AssetImage("assets/avt3.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -154,28 +160,16 @@ class Avatar extends StatelessWidget {
               ),
               CardWithIcon(
                 image: Image(
-                  image: AssetImage("assets/avt3.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              CardWithIcon(
-                image: Image(
-                  image: AssetImage("assets/avt4.jpg"),
+                  image: AssetImage("assets/avt1.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CardWithIcon(
-                image: Image(
-                  image: AssetImage("assets/avt1.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
               CardWithIcon(
                 image: Image(
                   image: AssetImage("assets/avt2.jpg"),
@@ -184,7 +178,7 @@ class Avatar extends StatelessWidget {
               ),
               CardWithIcon(
                 image: Image(
-                  image: AssetImage("assets/avt3.jpg"),
+                  image: AssetImage("assets/avt1.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -194,12 +188,35 @@ class Avatar extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+              CardWithIcon(
+                image: Image(
+                  image: AssetImage("assets/avt3.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
             ],
           ),
-          SizedBox(height: 40),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text("Use Avatar"),
+          const SizedBox(
+            height: 40,
+          ),
+          Container(
+            height: 50,
+            width: 350,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: const WidgetStatePropertyAll(Colors.black),
+                shape: WidgetStatePropertyAll(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: const Text(
+                "Use Avatar",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
           ),
         ],
       ),
